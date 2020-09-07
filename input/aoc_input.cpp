@@ -1,24 +1,25 @@
-// aoc_input.h
-#ifndef AOC_INPUT_H
-#define AOC_INPUT_H
-
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <vector>
 #include <stdlib.h>
 
+using namespace std;
+using std::string;
+using std::ifstream;
+using std::vector;
+
 namespace aocinput 
 {
-    std::string getInput(std::string path)
+    string getInput(std::string path)
     {
-        std::string line;
-        std::string input_str = "";
-        std::ifstream input(path, std::ios::in);
+        string line;
+        string input_str = "";
+        ifstream input(path, ios::in);
 
         if (!input)
         {
-            std::cout << "Unable to open input." << std::endl;
+            cout << "Unable to open input." << endl;
             exit(1);
         }
 
@@ -33,10 +34,10 @@ namespace aocinput
         return input_str;
     }
 
-    std::vector<std::string> delimSplit(std::string input, char delim)
+    vector<string> delimSplit(string input, char delim)
     {
-        std::vector<std::string> inputs;
-        std::string one = "";
+        vector<string> inputs;
+        string one = "";
         
         for (auto ch : input)
         {
@@ -59,19 +60,17 @@ namespace aocinput
         return inputs;
     }
 
-    std::vector<int> vecString2vecInt(std::vector<std::string> vecStr)
+    vector<int> vecString2vecInt(vector<string> vecStr)
     {
         // In which each string element of the vector is an integer
 
-        std::vector<int> vecInt;
+        vector<int> vecInt;
 
         for (auto str : vecStr)
         {
-            vecInt.push_back(std::stoi(str));
+            vecInt.push_back(stoi(str));
         }
         return vecInt;
     }
 
 }
-
-#endif /* AOC_INPUT_H */

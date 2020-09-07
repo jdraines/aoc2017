@@ -1,4 +1,4 @@
-#include "../aoc_input.h"
+#include "aoc_input.h"
 #include <string>
 #include <iostream>
 #include <vector>

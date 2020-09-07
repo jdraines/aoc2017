@@ -1,2 +1,14 @@
 **.dSYM/
 **.prog
+
+# Make / CMake
+**CMakeFiles/
+**CMakeCache.txt
+**cmake_install.cmake
+**Makefile
+
+# VS Code
+**.vscode/
+
+# binary executables
+**.out
