@@ -11,11 +11,9 @@ using aoc_spiral_mem::SpiralMemory;
 
 int main()
 {
-    // Run part 1 using the SpiralMemory class
 
     long input = 277678;
+    SpiralMemory mem = SpiralMemory(input, "test");
 
-    SpiralMemory mem = SpiralMemory(input);
-
-    cout << mem.access_steps(input);
 }
+
